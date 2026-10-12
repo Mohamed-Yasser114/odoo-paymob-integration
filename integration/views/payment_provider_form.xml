@@ -1,0 +1,15 @@
+<odoo>
+    <record id="payment_secretkey_form_view" model="ir.ui.view">
+        <field name="name">Payment secret key form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="paymob_secret_key" password="true" invisible="code != 'paymob'"/>
+                <field name="paymob_integration_id" password="true" invisible="code != 'paymob'"/>
+                <field name="paymob_public_key" password="true" invisible="code != 'paymob'"/>
+                <field name="paymob_hmac_secret" password="true" invisible="code != 'paymob'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

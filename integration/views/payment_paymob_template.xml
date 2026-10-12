@@ -1,0 +1,8 @@
+<odoo>
+    <template id="paymob_redirect_form">
+        <form action="https://eg.checkout.paymob.com/" method="get">
+            <input type="hidden" name="publicKey" t-att-value="public_key"/>
+            <input type="hidden" name="clientSecret" t-att-value="client_secret"/>
+        </form>
+    </template>
+</odoo>
